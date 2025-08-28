@@ -1,0 +1,59 @@
+/* style.css — exact desktop look + mobile bottom tabs (feed light theme) */
+:root{
+  --bg:#ffffff; --text:#111318; --muted:#5b6573; --border:#e8eaf0;
+  --accent:#6c63ff; --accent-2:#5a54e8;
+  --radius:22px; --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif;
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.5;font-size:16px}
+a{text-decoration:none;color:inherit}
+
+.frame{max-width:1200px;margin:18px auto;background:#fff;border:6px solid var(--accent);border-radius:var(--radius);overflow:hidden}
+.container{width:min(1120px,92%);margin-inline:auto}
+
+/* Header */
+.header{background:#fff;border-bottom:1px solid var(--border)}
+.header-grid{display:grid;grid-template-columns:auto 1fr auto;align-items:center;padding:16px 0;column-gap:24px}
+.logo{font-weight:900;font-size:24px;color:#1a2033}
+.nav-desktop{display:flex;gap:32px;justify-content:center}
+.nav-desktop a{color:#222;opacity:.92;padding:8px 6px;border-radius:10px;border:1px solid transparent}
+.nav-desktop a:hover{border-color:var(--border)}
+.nav-actions{display:flex}
+
+/* Buttons */
+.btn{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border:none;padding:12px 18px;border-radius:12px;font-weight:800}
+.btn.pill{border-radius:14px;padding:10px 18px}
+.btn.lg{padding:14px 24px;border-radius:14px}
+.w-full{width:100%}
+
+/* Hero */
+.hero{padding:88px 0 96px}
+.hero-inner{text-align:center}
+.display{margin:0 0 16px;font-size:64px;line-height:1.08}
+.lead{max-width:760px;margin:0 auto 26px;color:var(--muted);font-size:20px}
+
+/* Footer */
+.footer{padding:18px 0;border-top:1px solid var(--border);text-align:center}
+.muted{color:var(--muted)}
+
+/* Modal */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center}
+.modal[hidden]{display:none}
+.modal-backdrop{position:absolute;inset:0;background:rgba(17,19,22,.28)}
+.modal-card{position:relative;width:min(92%,520px);background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:0 24px 60px rgba(17,19,22,.18);padding:18px}
+.modal-title{margin:0 0 8px}
+.modal-close{position:absolute;top:10px;right:12px;background:#fff;border:1px solid var(--border);border-radius:10px;width:34px;height:34px;cursor:pointer}
+.form{display:grid;gap:12px;margin-top:8px}
+.field{display:grid;gap:6px}
+.field span{font-size:12px;color:var(--muted)}
+input{width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;background:#fff;outline:2px solid transparent;transition:outline .2s ease, box-shadow .2s ease}
+input:focus{outline:2px solid var(--accent);box-shadow:0 0 0 6px rgba(108,99,255,.16)}
+
+/* Mobile bottom icon nav */
+.nav-bottom{
+  position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--border);
+  display:grid;grid-template-columns:repeat(5,1fr);gap:2px;padding:8px 6px;z-index:50;
+}
+.nav-bottom a{color:#3a3f4a;display:grid;justify-items:center;gap:4px;font-size:11px;padding:6px 2px;border-radius:12px}
+.nav-bottom a[aria-current="page"]{color:var(--accent)}
+@media (min-width:1024px){ .nav-bottom{display:none} }
