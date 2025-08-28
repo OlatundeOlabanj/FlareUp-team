@@ -1,0 +1,89 @@
+<!-- chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlareUp — Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-grid">
+      <a class="logo" href="index.html">FlareUp</a>
+      <nav class="nav-desktop tabs">
+        <a href="feed.html">Feed</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="profile.html">Profile</a>
+        <a href="chat.html">Chat</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <h1>Chat</h1>
+
+      <div class="chat-grid">
+        <aside class="threads">
+          <div class="searchbar">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15.5 14h-.8l-.3-.3a6.5 6.5 0 10-.7.7l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0A4.5 4.5 0 1114 9.5 4.5 4.5 0 019.5 14z" fill="#5b6573"/></svg>
+            <input placeholder="Search..." />
+          </div>
+
+          <ul class="thread-list">
+            <li class="thread active">
+              <div class="avatar"></div>
+              <div class="meta">
+                <b>John Doe</b>
+                <span class="small muted">Hello, that works for me!</span>
+              </div>
+              <span class="time small muted">2h</span>
+            </li>
+            <li class="thread">
+              <div class="avatar"></div>
+              <div class="meta">
+                <b>Jane Smith</b>
+                <span class="small muted">Are you available for a call tomorrow?</span>
+              </div>
+              <span class="time small muted">5h</span>
+            </li>
+            <li class="thread">
+              <div class="avatar"></div>
+              <div class="meta">
+                <b>Michael Brown</b>
+                <span class="small muted">I’ll send you the details shortly.</span>
+              </div>
+              <span class="time small muted">1d</span>
+            </li>
+          </ul>
+        </aside>
+
+        <section class="conversation">
+          <header class="conv-head">
+            <div class="avatar"></div><b>John Doe</b>
+          </header>
+
+          <div id="messages" class="messages">
+            <div class="msg other">Hello! How are you?</div>
+            <div class="msg me">Hi! I’m good, thanks. How about you?</div>
+            <div class="msg other">I’m doing well. Would you be free to meet up this week?</div>
+            <div class="msg me">Sure, that works for me!</div>
+          </div>
+
+          <form id="chatForm" class="chat-input" onsubmit="return sendMessage()">
+            <input id="chatField" placeholder="Type a message..." />
+            <button class="send" aria-label="Send">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M2 21l21-9-21-9 5 9-5 9zm5-9l3 6 9-6-9-6-3 6z" fill="#6c63ff"/></svg>
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <nav class="nav-bottom">…same icons…</nav>
+  <script src="script.js"></script>
+</body>
+</html>
