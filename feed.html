@@ -140,6 +140,75 @@
     <a href="chat.html"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 4h16v12H6l-2 2z" fill="currentColor"/></svg><span>Chat</span></a>
     <a href="settings.html"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 8a4 4 0 100 8 4 4 0 000-8zm9 4a7.9 7.9 0 00-.2-1.8l2.2-1.7-2-3.4-2.6 1a8.2 8.2 0 00-3-1.8l-.5-2.7h-4l-.5 2.7a8.2 8.2 0 00-3 1.8l-2.6-1-2 3.4 2.2 1.7A7.9 7.9 0 003 12c0 .6.1 1.2.2 1.8L1 15.5l2 3.4 2.6-1a8.2 8.2 0 003 1.8l.5 2.7h4l.5-2.7a8.2 8.2 0 003-1.8l2.6 1 2-3.4-2.2-1.7c.1-.6.2-1.2.2-1.8z" fill="currentColor"/></svg><span>Settings</span></a>
   </nav>
+  <style>
+    /*.*/
+:root{
+  --bg:#ffffff; --text:#111318; --muted:#5b6573; --border:#e8eaf0;
+  --accent:#6c63ff; --accent-2:#5a54e8; --ring:rgba(108,99,255,.16);
+  --shadow:0 8px 24px rgba(17,19,22,.06);
+  --radius:18px;
+  --font:ui-sans-serif,system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;background:#fff;color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.5;font-size:16px}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin-inline:auto}
+
+/* Header */
+.header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
+.header-grid{display:grid;grid-template-columns:auto 1fr;align-items:center;padding:14px 0;gap:18px}
+.logo{font-weight:900;font-size:22px;color:#1a2033}
+.nav-desktop{display:flex;gap:28px;justify-content:center}
+.nav-desktop a{color:#222;opacity:.92;padding:8px 6px;border-radius:10px;border:1px solid transparent}
+.nav-desktop a:hover{border-color:var(--border)}
+.tabs a[aria-current="page"]{position:relative;color:#1a2033}
+.tabs a[aria-current="page"]::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:3px;border-radius:2px;background:#1a2033}
+
+/* Grid */
+.page{padding:22px 0}
+.feed-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:22px}
+@media (max-width:1023.98px){ .feed-grid{grid-template-columns:1fr} }
+
+/* Cards */
+.post{
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:14px 16px;display:grid;gap:12px;
+}
+.post.mini{padding:12px}
+.post-head{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}
+.avatar{width:40px;height:40px;border-radius:50%;background:#f3f4ff;border:1px solid var(--border);display:inline-block}
+.avatar.small{width:28px;height:28px}
+.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.sub{color:var(--muted);font-size:12px}
+.time{color:var(--muted);font-size:12px}
+.post-body{font-size:15px}
+.post-media{margin:0}
+.post-media img{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);display:block}
+.post-actions{display:flex;gap:10px}
+.post-actions.tight .act{padding:6px 8px}
+.act{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:10px;border:1px solid transparent;background:#fff;color:#3a3f4a;cursor:pointer}
+.act:hover{border-color:var(--border);box-shadow:var(--shadow)}
+.act:focus{outline:2px solid var(--accent);box-shadow:0 0 0 6px var(--ring)}
+
+/* Comments */
+.comments .comments-wrap{border-top:1px solid var(--border);padding-top:10px;display:grid;gap:10px}
+.comment{display:flex;gap:10px;align-items:flex-start}
+.bubble{background:#f7f8ff;border:1px solid var(--border);padding:8px 10px;border-radius:10px}
+.comment-form{display:grid;grid-template-columns:1fr auto;gap:8px}
+.comment-input{padding:10px;border:1px solid var(--border);border-radius:10px;outline:2px solid transparent}
+.comment-input:focus{outline:2px solid var(--accent);box-shadow:0 0 0 6px var(--ring)}
+.btn{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border:none;padding:10px 14px;border-radius:12px;font-weight:800}
+.pill{border-radius:14px}
+
+/* Mobile bottom tabs */
+.nav-bottom{
+  position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--border);
+  display:grid;grid-template-columns:repeat(5,1fr);gap:2px;padding:8px 6px;z-index:50;
+}
+.nav-bottom a{color:#3a3f4a;display:grid;justify-items:center;gap:4px;font-size:11px;padding:6px 2px;border-radius:12px}
+.nav-bottom a[aria-current="page"]{color:var(--accent)}
+@media (min-width:1024px){ .nav-bottom{display:none} }
+  </style>
 
   <script src="feed.js"></script>
 </body>
