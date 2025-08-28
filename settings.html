@@ -1,0 +1,64 @@
+<!-- settings.html (with purple frame wrapper like screenshot) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlareUp — Settings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="frame">
+    <header class="header">
+      <div class="container header-grid">
+        <a class="logo" href="index.html">FlareUp</a>
+        <nav class="nav-desktop tabs">
+          <a href="feed.html">Feed</a>
+          <a href="opportunities.html">Opportunities</a>
+          <a href="profile.html">Profile</a>
+          <a href="chat.html">Chat</a>
+          <a href="settings.html">Settings</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="container settings-layout">
+        <aside class="settings-side">
+          <a href="index.html" class="side-link"><span class="ico home"></span>Home</a>
+          <a href="profile.html" class="side-link"><span class="ico user"></span>Profile</a>
+          <a href="chat.html" class="side-link"><span class="ico msg"></span>Messages</a>
+          <a href="settings.html" class="side-link active"><span class="ico settings"></span>Settings</a>
+        </aside>
+
+        <section class="settings-main">
+          <h1>Settings</h1>
+
+          <div class="settings-group">
+            <h3>Account Settings</h3>
+            <ul class="settings-list">
+              <li><a href="#">Change Email</a></li>
+              <li><a href="#">Change Password</a></li>
+              <li><a href="#" class="danger">Delete Account</a></li>
+            </ul>
+          </div>
+
+          <div class="settings-group">
+            <h3>Notifications</h3>
+            <label class="switch">
+              <input id="notifToggle" type="checkbox" checked />
+              <span class="slider"></span>
+              <span class="switch-label">Email Notifications</span>
+            </label>
+          </div>
+
+          <button class="btn" onclick="saveSettings()">Save Changes</button>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <nav class="nav-bottom">…same icons…</nav>
+  <script src="script.js"></script>
+</body>
+</html>
