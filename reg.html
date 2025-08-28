@@ -1,0 +1,39 @@
+<!-- reg.html (Register) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlareUp — Register</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header soft">
+    <div class="container header-grid">
+      <a class="logo" href="index.html">FlareUp</a>
+      <nav class="nav-desktop">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-wrap">
+    <section class="auth-card">
+      <h1>Register</h1>
+      <form class="form" onsubmit="return fakeSubmit(this)">
+        <label class="field"><span>Name</span><input required type="text" placeholder="Your name" /></label>
+        <label class="field"><span>Email</span><input required type="email" placeholder="you@email.com" /></label>
+        <label class="field"><span>Password</span><input required type="password" placeholder="Create a password" /></label>
+        <button class="btn lg w-full" type="submit">Register</button>
+        <hr class="divider" />
+        <p class="muted center">Already have an account? <a class="link-strong" href="login.html">Login</a></p>
+      </form>
+    </section>
+  </main>
+
+  <nav class="nav-bottom">…same as login.html…</nav>
+  <script src="script.js"></script>
+</body>
+</html>
