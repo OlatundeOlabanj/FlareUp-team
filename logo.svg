@@ -1,0 +1,10 @@
+<svg width="88" height="28" viewBox="0 0 88 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="88" y2="28" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#7C4DFF"/><stop offset="1" stop-color="#A78BFA"/>
+  </linearGradient>
+</defs>
+<rect x="1" y="1" width="26" height="26" rx="8" fill="url(#g)" stroke="#ffffff22"/>
+<circle cx="14" cy="14" r="6" fill="#fff"/>
+<text x="34" y="19" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="url(#g)">FlareUp</text>
+</svg>

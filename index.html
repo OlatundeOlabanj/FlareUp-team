@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed — FlareUp</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/app.js"></script>
+
+</head>
+<body class="page-feed">
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="FlareUp" class="logo" />
+      <span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open Menu" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="siteNav">
+      <a href="index.html" class="nav-link active">Feed</a>
+      <a href="collab.html" class="nav-link ">Collab</a>
+      <a href="about.html" class="nav-link ">About</a>
+      <a href="auth.html" class="nav-link ">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1 class="page-title">Latest from the community</h1>
+  <section class="feed">
+    <!-- Post Card 1 -->
+    <article class="card post">
+      <header class="post-header">
+        <div class="avatar">AR</div>
+        <div class="meta">
+          <h2 class="author">Ari Richards</h2>
+          <time datetime="2025-08-29">Aug 29, 2025</time>
+        </div>
+      </header>
+      <p class="post-text">Designing a collab space that feels like Discord but works for creators. Thoughts on channel structure?</p>
+      <div class="post-media ratio-16x9">
+        <img src="assets/sample1.jpg" alt="Prototype preview"/>
+      </div>
+      <footer class="post-actions">
+        <button class="btn action like">Like</button>
+        <button class="btn action comment">Comment</button>
+        <button class="btn action share">Share</button>
+      </footer>
+    </article>
+
+    <!-- Post Card 2 -->
+    <article class="card post">
+      <header class="post-header">
+        <div class="avatar">EM</div>
+        <div class="meta">
+          <h2 class="author">Eman Tee</h2>
+          <time datetime="2025-08-26">Aug 26, 2025</time>
+        </div>
+      </header>
+      <p class="post-text">Shipping the auth flow tonight. White + purple accents and a clean layout ✨</p>
+      <footer class="post-actions">
+        <button class="btn action like">Like</button>
+        <button class="btn action comment">Comment</button>
+        <button class="btn action share">Share</button>
+      </footer>
+    </article>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> FlareUp — creators meet to collaborate and share ideas.</p>
+  </div>
+</footer>
+
+</body>
+</html>
